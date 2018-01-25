@@ -7,17 +7,44 @@
   <link rel='stylesheet' type='text/css' href='css/main.css'>
   <title>Angular 101</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
 </head>
-<body ng-app>
+<body ng-app="funWithStuff">
   <h1> Angular 101</h1>
-  <p>{{"Angular" + "js".toUpperCase() }} </p>
-
+  <!-- <p>{{"Angular" + "js".toUpperCase() }} </p>
   <p>{{a = 5}} here is still</p>
   <p>{{a}} here</p>
   <p>There {{count = 3; (verb = count === 1 ? "is" : "are"); verb + " " + count}} of them.</p>
   <input type="text" placeholder="This input is bound to..." ng-model="coolBinding"/>
   <h2>this: {{coolBinding.toUpperCase()}}</h2>
+  <hr>
 
-  <script src="app.js"></script>
+  <p ng-init="allowed=false">
+    The Secret Code is
+    <span ng-show="allowed">01234</span>
+    <span ng-hide="allowed">super slick secret, my duuuude</span><br>
+    <input type="button" value="toggle" ng-click="allowed = !allowed"/>
+    
+  </p>
+  <hr>
+  <p ng-controller="MessageCtrl">
+    <span style="color:red;">{{message}} </span>and <span style="color: blue;">also</span>, with you.
+  </p>
+
+  <p ng-controller="MessageCtrl2">
+    {{message}}
+  </p> -->
+
+  <div ng-view>
+
+  </div>
+
+  <script src="scripts/app.js"></script>
+  <script src="controllers/todoCtrl.js"></script>
+  <script src="controllers/songs.js"></script>
+
+  <script src="factories/songsFactory.js"></script>
+
+
 </body>
 </html>
