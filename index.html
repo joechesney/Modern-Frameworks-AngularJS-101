@@ -6,10 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' type='text/css' href='css/main.css'>
   <title>Angular 101</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
-<body>
-  
+<body ng-app>
+  <h1> Angular 101</h1>
+  <p>{{"Angular" + "js".toUpperCase() }} </p>
 
-  <script src="dist/bundle.js"></script>
+  <p>{{a = 5}} here is still</p>
+  <p>{{a}} here</p>
+  <p>There {{count = 3; (verb = count === 1 ? "is" : "are"); verb + " " + count}} of them.</p>
+  <input type="text" placeholder="This input is bound to..." ng-model="coolBinding"/>
+  <h2>this: {{coolBinding.toUpperCase()}}</h2>
+
+  <script src="app.js"></script>
 </body>
 </html>

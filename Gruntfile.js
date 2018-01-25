@@ -6,7 +6,10 @@ module.exports = function(grunt){
         predef: ['document', 'console', 'alert', '$'],
         esnext: true,
         globalstrict: true,
-        globals: {},
+        globals: {
+          "angular": true,
+          "app.js": true
+        },
         browserify: true
       }
     },
